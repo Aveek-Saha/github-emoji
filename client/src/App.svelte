@@ -1,13 +1,14 @@
 <script>
 import axios from "axios"
 
-let emoji = {}
+let emojis = []
 
 axios.get('https://api.github.com/emojis')
   .then(function (response) {
     // handle success
 	console.log(response);
-	emoji = response.data;
+	emojis = Object.entries(response.data);
+
   })
   .catch(function (error) {
     // handle error
@@ -15,4 +16,10 @@ axios.get('https://api.github.com/emojis')
   })
 </script>
 
-<p> {emoji.abcd} </p>
+
+{#each emojis as emoji, index (emoji)}
+	<li>
+	{emoji[0]}
+	<img src={emoji[1]} alt="emoji">
+	</li>
+{/each}
