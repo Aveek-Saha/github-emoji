@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "emojibase": "^4.0.1",
     "sirv-cli": "^0.4.4"
   }
 }
