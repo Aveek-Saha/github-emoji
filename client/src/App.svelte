@@ -12,7 +12,7 @@ axios.get('https://api.github.com/emojis')
 	emojis = Object.entries(response.data);
 	emojis.forEach(em => {
 		var code = fromHexcodeToCodepoint(em[1].split("?")[0].split("/").splice(-1)[0].split(".")[0].toUpperCase())
-		em[1] = code == "NaN" ? em[1] :fromCodepointToUnicode(code)
+		em[1] = code == "NaN" ? "<img src=\"" + em[1] + "\">" :fromCodepointToUnicode(code)
 	});
 
   })
@@ -27,6 +27,6 @@ axios.get('https://api.github.com/emojis')
 	<li>
 	{emoji[0]}
 	<!-- <img src={emoji[1]} alt="emoji"> -->
-	: {emoji[1]}
+	: {@html emoji[1]}
 	</li>
 {/each}
