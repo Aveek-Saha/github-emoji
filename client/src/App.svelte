@@ -13,6 +13,8 @@ axios.get('https://api.github.com/emojis')
 	emojis.forEach(em => {
 		var code = fromHexcodeToCodepoint(em[1].split("?")[0].split("/").splice(-1)[0].split(".")[0].toUpperCase())
 		em[1] = code == "NaN" ? "<img src=\"" + em[1] + "\">" :fromCodepointToUnicode(code)
+		// em[1] = "&#x" + em[1].split("?")[0].split("/").splice(-1)[0].split(".")[0].toUpperCase()
+
 	});
 
   })
@@ -24,9 +26,8 @@ axios.get('https://api.github.com/emojis')
 
 
 {#each emojis as emoji, index (emoji)}
-	<li>
-	{emoji[0]}
-	<!-- <img src={emoji[1]} alt="emoji"> -->
-	: {@html emoji[1]}
-	</li>
+	<span style='font-size:30px;'>
+	<!-- {emoji[0]}:  -->
+	{@html emoji[1]}
+	</span>
 {/each}
