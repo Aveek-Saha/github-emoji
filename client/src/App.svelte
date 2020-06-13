@@ -19,10 +19,10 @@ axios.get('https://api.github.com/emojis')
 		// 	code = "<img src=\"" + em[1] + "\">"
 		// 	console.log(err);	
 		// }
-		em[1] = code == "NaN" ? "<img src=\"" + em[1] + "\">" : fromCodepointToUnicode(code)
+		// em[1] = code == "NaN" ? "<img src=\"" + em[1] + "\">" : fromCodepointToUnicode(code)
 		// console.log(em[1].split("?")[0].split("/").splice(-1)[0].split(".")[0].toUpperCase().split("-"));
 		
-		// em[1] = code
+		em[1] = code.map(num => "&#" + num + ";").join("&zwj;")
 		// em[1] = "<img src=\"" + em[1] + "\">"
 
 	});
@@ -40,7 +40,7 @@ axios.get('https://api.github.com/emojis')
 {#each emojis as emoji, index (emoji)}
 	<span style='font-size:30px;'>
 	<!-- {emoji[0]}:  -->
-	{ emoji[1]}
+	{@html emoji[1]}
 	</span>
 	<!-- <img src={emoji[1]} alt={emoji[0]}> -->
 {/each}
