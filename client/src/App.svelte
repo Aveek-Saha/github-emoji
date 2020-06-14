@@ -2,28 +2,23 @@
 import axios from "axios"
 import { fromHexcodeToCodepoint, fromCodepointToUnicode } from 'emojibase';
 
+import * as config from "../config.json"
+
 let emojis = []
 
 axios.get('https://api.github.com/emojis')
   .then(function (response) {
     // handle success
-	console.log(response);
 	emojis = Object.entries(response.data);
+	axios.get('https://emoji-api.com/emojis?access_key=' + config.emoji_api)
+	.then((res) => {
+		console.log(res.data);	
+	})
 	emojis.forEach(em => {
 		var code = fromHexcodeToCodepoint(em[1].split("?")[0].split("/").splice(-1)[0].split(".")[0].toUpperCase())
-		// var code = em[1].split("?")[0].split("/").splice(-1)[0].split(".")[0].split("-").map(num => parseInt(num, 16))
-		// try {
-		// 	code = String.fromCodePoint(code);
-		// }
-		// catch(err) {
-		// 	code = "<img src=\"" + em[1] + "\">"
-		// 	console.log(err);	
-		// }
-		// em[1] = code == "NaN" ? "<img src=\"" + em[1] + "\">" : fromCodepointToUnicode(code)
-		// console.log(em[1].split("?")[0].split("/").splice(-1)[0].split(".")[0].toUpperCase().split("-"));
+		// var code = em[1].split("?")[0].split("/").splice(-1)[0].split(".")[0].split("-").map(num => parseInt(num, 16)
 		
 		em[1] = code == "NaN" ? "<img src=\"" + em[1] + "\">" : code.map(num => "&#" + num + ";").join("&zwj;")
-		// em[1] = "<img src=\"" + em[1] + "\">"
 
 	}); 
 
