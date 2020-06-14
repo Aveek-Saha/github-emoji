@@ -1,6 +1,8 @@
 <script>
 import axios from "axios"
 import { fromHexcodeToCodepoint, fromCodepointToUnicode } from 'emojibase';
+import ifEmoji from 'if-emoji'
+
 
 import * as config from "../config.json"
 
@@ -12,7 +14,7 @@ axios.get('https://api.github.com/emojis')
 	var arr = Object.entries(response.data);
 	axios.get('https://emoji-api.com/emojis?access_key=' + config.emoji_api)
 	.then((res) => {
-		console.log(res.data);	
+		// console.log(res.data);	
 		emojis = res.data
 	})
 	// arr.forEach(em => {
@@ -38,9 +40,10 @@ axios.get('https://api.github.com/emojis')
 
 
 {#each emojis as emoji, index (emoji)}
-	<span>
-	<!-- {emoji[0]}:  -->
-	{@html emoji.character}
-	</span>
-	<!-- <img src={emoji[1]} alt={emoji[0]}> -->
+	{#if ifEmoji(emoji.character)}
+		<span>
+			{ emoji.character}
+		</span>
+	{/if}
+	<!-- <img src={emoji.display} alt={emoji.shortcode}> -->
 {/each}
