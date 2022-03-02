@@ -1,0 +1,19 @@
+{
+  "name": "gmoji",
+  "version": "1.0.0",
+  "description": "Show all GitHub supported emoji",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aveek-Saha/gmoji.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aveek-Saha/gmoji/issues"
+  },
+  "homepage": "https://github.com/Aveek-Saha/gmoji#readme"
+}
