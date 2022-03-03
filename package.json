@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Aveek-Saha/gmoji/issues"
   },
-  "homepage": "https://github.com/Aveek-Saha/gmoji#readme"
+  "homepage": "https://github.com/Aveek-Saha/gmoji#readme",
+  "dependencies": {
+    "axios": "^0.26.1"
+  }
 }
