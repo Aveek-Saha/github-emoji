@@ -1,5 +1,5 @@
 const fs = require("fs");
-const path = require('path');
+const path = require("path");
 const axios = require("axios");
 
 // import { fromHexcodeToCodepoint, fromCodepointToUnicode } from "emojibase";
@@ -8,16 +8,28 @@ const axios = require("axios");
 // import * as config from "../config.json";
 
 async function main() {
-    let emojis = [];
+    // let emojis = [];
     const githubEmojis = await axios.get("https://api.github.com/emojis");
-    const file_path = path.join("data", "github_emojis.json")
+    const file_path = path.join("data", "github_emojis.json");
+
+    var ghEmojiArr = Object.entries(githubEmojis.data);
+    var emojis = {}
+    ghEmojiArr.forEach((em) => {
+        var hex = em[1]
+            .split("?")[0]
+            .split("/")
+            .splice(-1)[0]
+            .split(".")[0]
+            .toUpperCase();
+        emojis[em[0]]= hex
+    });
 
     try {
-        fs.writeFileSync(file_path, JSON.stringify(githubEmojis.data));
+        fs.writeFileSync(file_path, JSON.stringify(emojis, null, 4));
     } catch (err) {
         console.error(err);
     }
-};
+}
 
 main();
 
