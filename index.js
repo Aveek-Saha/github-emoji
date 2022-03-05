@@ -2,7 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
 
-// import { fromHexcodeToCodepoint, fromCodepointToUnicode } from "emojibase";
+const { fromHexcodeToCodepoint, fromCodepointToUnicode } = require("emojibase");
+
 // import ifEmoji from "if-emoji";
 
 // import * as config from "../config.json";
@@ -13,7 +14,7 @@ async function main() {
     const file_path = path.join("data", "github_emojis.json");
 
     var ghEmojiArr = Object.entries(githubEmojis.data);
-    var emojis = {}
+    var emojis = {};
     ghEmojiArr.forEach((em) => {
         var hex = em[1]
             .split("?")[0]
@@ -21,7 +22,13 @@ async function main() {
             .splice(-1)[0]
             .split(".")[0]
             .toUpperCase();
-        emojis[em[0]]= hex
+
+        var code = fromHexcodeToCodepoint(hex);
+        if(!isNaN(code[0]))
+            code = fromCodepointToUnicode(code);
+        else
+            code = hex
+        emojis[em[0]] = code;
     });
 
     try {
