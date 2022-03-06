@@ -4,38 +4,49 @@ const axios = require("axios");
 
 const { fromHexcodeToCodepoint, fromCodepointToUnicode } = require("emojibase");
 
+const config = require("./config.json")
+
 // import ifEmoji from "if-emoji";
 
-// import * as config from "../config.json";
-
 async function main() {
-    // let emojis = [];
-    const githubEmojis = await axios.get("https://api.github.com/emojis");
-    const file_path = path.join("data", "github_emojis.json");
+    // const githubEmojis = await axios.get("https://api.github.com/emojis");
+    // const file_path = path.join("data", "github_emojis.json");
 
-    var ghEmojiArr = Object.entries(githubEmojis.data);
-    var emojis = {};
-    ghEmojiArr.forEach((em) => {
-        var hex = em[1]
-            .split("?")[0]
-            .split("/")
-            .splice(-1)[0]
-            .split(".")[0]
-            .toUpperCase();
+    // var ghEmojiArr = Object.entries(githubEmojis.data);
+    // var emojis = {};
+    // ghEmojiArr.forEach((em) => {
+    //     var hex = em[1]
+    //         .split("?")[0]
+    //         .split("/")
+    //         .splice(-1)[0]
+    //         .split(".")[0]
+    //         .toUpperCase();
 
-        var code = fromHexcodeToCodepoint(hex);
-        if(!isNaN(code[0]))
-            code = fromCodepointToUnicode(code);
-        else
-            code = hex
-        emojis[em[0]] = code;
-    });
+    //     var code = fromHexcodeToCodepoint(hex);
+    //     if(!isNaN(code[0]))
+    //         code = fromCodepointToUnicode(code);
+    //     else
+    //         code = hex
+    //     emojis[em[0]] = code;
+    // });
+
+    // try {
+    //     fs.writeFileSync(file_path, JSON.stringify(emojis, null, 4));
+    // } catch (err) {
+    //     console.error(err);
+    // }
+
+    const emojiApi = await axios.get("https://emoji-api.com/emojis?access_key=" + config.emoji_api);
+    const emojApi_file_path = path.join("data", "emoji_api.json");
+
+    const emojiApi_data = emojiApi.data
 
     try {
-        fs.writeFileSync(file_path, JSON.stringify(emojis, null, 4));
+        fs.writeFileSync(emojApi_file_path, JSON.stringify(emojiApi_data, null, 4));
     } catch (err) {
         console.error(err);
     }
+
 }
 
 main();
