@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
 
-const { fromHexcodeToCodepoint, fromCodepointToUnicode } = require("emojibase");
+const { fromHexcodeToCodepoint, fromCodepointToUnicode, fetchShortcodes } = require("emojibase");
 
 const config = require("./config.json")
 
@@ -36,13 +36,26 @@ async function main() {
     //     console.error(err);
     // }
 
-    const emojiApi = await axios.get("https://emoji-api.com/emojis?access_key=" + config.emoji_api);
-    const emojApi_file_path = path.join("data", "emoji_api.json");
+    // const emojiApi = await axios.get("https://emoji-api.com/emojis?access_key=" + config.emoji_api);
+    // const emojApi_file_path = path.join("data", "emoji_api.json");
 
-    const emojiApi_data = emojiApi.data
+    // const emojiApi_data = emojiApi.data
+
+    // try {
+    //     fs.writeFileSync(emojApi_file_path, JSON.stringify(emojiApi_data, null, 4));
+    // } catch (err) {
+    //     console.error(err);
+    // }
+
+    const emoji_shortcodes = await axios.get("https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/shortcodes/github.json");
+    const emojis_details = await axios.get("https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/compact.json");
+    const emoji_shortcodes_file_path = path.join("data", "emojibase_shortcodes.json");
+    const emojis_details_file_path = path.join("data", "emojibase_details.json");
+
 
     try {
-        fs.writeFileSync(emojApi_file_path, JSON.stringify(emojiApi_data, null, 4));
+        fs.writeFileSync(emoji_shortcodes_file_path, JSON.stringify(emoji_shortcodes.data, null, 4));
+        fs.writeFileSync(emojis_details_file_path, JSON.stringify(emojis_details.data, null, 4));
     } catch (err) {
         console.error(err);
     }
