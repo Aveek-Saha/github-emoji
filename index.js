@@ -47,15 +47,35 @@ async function main() {
     //     console.error(err);
     // }
 
-    const emoji_shortcodes = await axios.get("https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/shortcodes/github.json");
-    const emojis_details = await axios.get("https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/compact.json");
+    // const emoji_shortcodes = await axios.get("https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/shortcodes/github.json");
+    // const emojis_details = await axios.get("https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/compact.json");
     const emoji_shortcodes_file_path = path.join("data", "emojibase_shortcodes.json");
     const emojis_details_file_path = path.join("data", "emojibase_details.json");
 
 
+    // try {
+    //     fs.writeFileSync(emoji_shortcodes_file_path, JSON.stringify(emoji_shortcodes.data, null, 4));
+    //     fs.writeFileSync(emojis_details_file_path, JSON.stringify(emojis_details.data, null, 4));
+    // } catch (err) {
+    //     console.error(err);
+    // }
+
+    const emoji_shortcodes = JSON.parse(fs.readFileSync(emoji_shortcodes_file_path, 'utf-8'))
+    const emojis_details = JSON.parse(fs.readFileSync(emojis_details_file_path, 'utf-8'))
+
+    var shortcodes = {}
+
+    emojis_details.forEach(emoji => {
+        if(emoji['hexcode'] in emoji_shortcodes){
+            shortcode_name = emoji_shortcodes[emoji['hexcode']]
+            shortcodes[shortcode_name] = emoji
+        }
+    });
+
+    const emoji_cons_file_path = path.join("data", "emoji_cons.json");
+
     try {
-        fs.writeFileSync(emoji_shortcodes_file_path, JSON.stringify(emoji_shortcodes.data, null, 4));
-        fs.writeFileSync(emojis_details_file_path, JSON.stringify(emojis_details.data, null, 4));
+        fs.writeFileSync(emoji_cons_file_path, JSON.stringify(shortcodes, null, 4));
     } catch (err) {
         console.error(err);
     }
@@ -64,57 +84,3 @@ async function main() {
 
 main();
 
-// axios
-//     .get("https://api.github.com/emojis")
-//     .then(function (response) {
-//         // handle success
-//         var arr = Object.entries(response.data);
-//         axios
-//             .get("https://emoji-api.com/emojis?access_key=" + config.emoji_api)
-//             .then((res) => {
-//                 // console.log(res.data);
-//                 // emojis = res.data
-//                 arr.forEach((em) => {
-//                     var hex = em[1]
-//                         .split("?")[0]
-//                         .split("/")
-//                         .splice(-1)[0]
-//                         .split(".")[0]
-//                         .toUpperCase();
-//                     var code = fromHexcodeToCodepoint(hex);
-//                     // var code = em[1].split("?")[0].split("/").splice(-1)[0].split(".")[0].split("-").map(num => parseInt(num, 16)
-//                     var dis =
-//                         code == "NaN"
-//                             ? '<img src="' + em[1] + '">'
-//                             : code.map((num) => "&#" + num + ";").join("&zwj;");
-
-//                     var data = res.data.find(
-//                         (x) => x.codePoint === hex.split("-").join(" ")
-//                     );
-//                     // console.log(data);
-//                     if (data) {
-//                         data.image = em[1];
-//                         data.shortcode = em[0];
-//                     } else {
-//                         data = {
-//                             display:
-//                                 code == "NaN"
-//                                     ? '<img src="' + em[1] + '">'
-//                                     : code
-//                                           .map((num) => "&#" + num + ";")
-//                                           .join("&zwj;"),
-//                             image: em[1],
-//                             shortcode: em[0],
-//                         };
-//                     }
-
-//                     emojis.push(data);
-//                     // console.log(hex.split("-").join(" "));
-//                 });
-//                 emojis = emojis;
-//             });
-//     })
-//     .catch(function (error) {
-//         // handle error
-//         console.log(error);
-//     });
