@@ -10,7 +10,7 @@ const config = require("./config.json")
 
 async function main() {
     // const githubEmojis = await axios.get("https://api.github.com/emojis");
-    // const file_path = path.join("data", "github_emojis.json");
+    const file_path = path.join("data", "github_emojis.json");
 
     // var ghEmojiArr = Object.entries(githubEmojis.data);
     // var emojis = {};
@@ -62,6 +62,7 @@ async function main() {
 
     const emoji_shortcodes = JSON.parse(fs.readFileSync(emoji_shortcodes_file_path, 'utf-8'))
     const emojis_details = JSON.parse(fs.readFileSync(emojis_details_file_path, 'utf-8'))
+    const github_emojis = JSON.parse(fs.readFileSync(file_path, 'utf-8'))
 
     var shortcodes = {}
 
@@ -71,6 +72,15 @@ async function main() {
             shortcodes[shortcode_name] = emoji
         }
     });
+    var github_exclusive = {}
+    Object.entries(github_emojis).forEach(emoji => {
+        if(!(emoji[0] in shortcodes)){
+            github_exclusive[emoji[0]] = emoji[1]
+        }
+    });
+
+    shortcodes["github_exclusive"] = github_exclusive
+
 
     const emoji_cons_file_path = path.join("data", "emoji_cons.json");
 
