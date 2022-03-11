@@ -69,7 +69,13 @@ async function main() {
     emojis_details.forEach(emoji => {
         if(emoji['hexcode'] in emoji_shortcodes){
             shortcode_name = emoji_shortcodes[emoji['hexcode']]
-            shortcodes[shortcode_name] = emoji
+            if(Array.isArray(shortcode_name)){
+                shortcode_name.forEach(shortcode => {
+                    shortcodes[shortcode] = emoji
+                });
+            }
+            else
+                shortcodes[shortcode_name] = emoji
         }
     });
     var github_exclusive = {}

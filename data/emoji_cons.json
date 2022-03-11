@@ -76,7 +76,25 @@
         ],
         "unicode": "😁"
     },
-    "laughing,satisfied": {
+    "laughing": {
+        "group": 0,
+        "hexcode": "1F606",
+        "label": "grinning squinting face",
+        "order": 5,
+        "tags": [
+            "face",
+            "laugh",
+            "mouth",
+            "satisfied",
+            "smile"
+        ],
+        "unicode": "😆",
+        "emoticon": [
+            "xD",
+            "XD"
+        ]
+    },
+    "satisfied": {
         "group": 0,
         "hexcode": "1F606",
         "label": "grinning squinting face",
@@ -1254,7 +1272,24 @@
         ],
         "unicode": "😤"
     },
-    "pout,rage": {
+    "pout": {
+        "group": 0,
+        "hexcode": "1F621",
+        "label": "enraged face",
+        "order": 103,
+        "tags": [
+            "angry",
+            "enraged",
+            "face",
+            "mad",
+            "pouting",
+            "rage",
+            "red"
+        ],
+        "unicode": "😡",
+        "emoticon": ">:/"
+    },
+    "rage": {
         "group": 0,
         "hexcode": "1F621",
         "label": "enraged face",
@@ -1352,7 +1387,35 @@
         ],
         "unicode": "☠️"
     },
-    "hankey,poop,shit": {
+    "hankey": {
+        "group": 0,
+        "hexcode": "1F4A9",
+        "label": "pile of poo",
+        "order": 111,
+        "tags": [
+            "dung",
+            "face",
+            "monster",
+            "poo",
+            "poop"
+        ],
+        "unicode": "💩"
+    },
+    "poop": {
+        "group": 0,
+        "hexcode": "1F4A9",
+        "label": "pile of poo",
+        "order": 111,
+        "tags": [
+            "dung",
+            "face",
+            "monster",
+            "poo",
+            "poop"
+        ],
+        "unicode": "💩"
+    },
+    "shit": {
         "group": 0,
         "hexcode": "1F4A9",
         "label": "pile of poo",
@@ -1899,7 +1962,18 @@
         ],
         "unicode": "💢"
     },
-    "boom,collision": {
+    "boom": {
+        "group": 0,
+        "hexcode": "1F4A5",
+        "label": "collision",
+        "order": 160,
+        "tags": [
+            "boom",
+            "comic"
+        ],
+        "unicode": "💥"
+    },
+    "collision": {
         "group": 0,
         "hexcode": "1F4A5",
         "label": "collision",
@@ -2191,7 +2265,56 @@
             }
         ]
     },
-    "hand,raised_hand": {
+    "hand": {
+        "group": 1,
+        "hexcode": "270B",
+        "label": "raised hand",
+        "order": 197,
+        "tags": [
+            "hand",
+            "high 5",
+            "high five"
+        ],
+        "unicode": "✋",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "270B-1F3FB",
+                "label": "raised hand: light skin tone",
+                "order": 198,
+                "unicode": "✋🏻"
+            },
+            {
+                "group": 1,
+                "hexcode": "270B-1F3FC",
+                "label": "raised hand: medium-light skin tone",
+                "order": 199,
+                "unicode": "✋🏼"
+            },
+            {
+                "group": 1,
+                "hexcode": "270B-1F3FD",
+                "label": "raised hand: medium skin tone",
+                "order": 200,
+                "unicode": "✋🏽"
+            },
+            {
+                "group": 1,
+                "hexcode": "270B-1F3FE",
+                "label": "raised hand: medium-dark skin tone",
+                "order": 201,
+                "unicode": "✋🏾"
+            },
+            {
+                "group": 1,
+                "hexcode": "270B-1F3FF",
+                "label": "raised hand: dark skin tone",
+                "order": 202,
+                "unicode": "✋🏿"
+            }
+        ]
+    },
+    "raised_hand": {
         "group": 1,
         "hexcode": "270B",
         "label": "raised hand",
@@ -2840,7 +2963,55 @@
             }
         ]
     },
-    "fu,middle_finger": {
+    "fu": {
+        "group": 1,
+        "hexcode": "1F595",
+        "label": "middle finger",
+        "order": 306,
+        "tags": [
+            "finger",
+            "hand"
+        ],
+        "unicode": "🖕",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "1F595-1F3FB",
+                "label": "middle finger: light skin tone",
+                "order": 307,
+                "unicode": "🖕🏻"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F595-1F3FC",
+                "label": "middle finger: medium-light skin tone",
+                "order": 308,
+                "unicode": "🖕🏼"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F595-1F3FD",
+                "label": "middle finger: medium skin tone",
+                "order": 309,
+                "unicode": "🖕🏽"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F595-1F3FE",
+                "label": "middle finger: medium-dark skin tone",
+                "order": 310,
+                "unicode": "🖕🏾"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F595-1F3FF",
+                "label": "middle finger: dark skin tone",
+                "order": 311,
+                "unicode": "🖕🏿"
+            }
+        ]
+    },
+    "middle_finger": {
         "group": 1,
         "hexcode": "1F595",
         "label": "middle finger",
@@ -2990,7 +3161,7 @@
             }
         ]
     },
-    "+1,thumbsup": {
+    "+1": {
         "group": 1,
         "hexcode": "1F44D",
         "label": "thumbs up",
@@ -3040,7 +3211,57 @@
             }
         ]
     },
-    "-1,thumbsdown": {
+    "thumbsup": {
+        "group": 1,
+        "hexcode": "1F44D",
+        "label": "thumbs up",
+        "order": 331,
+        "tags": [
+            "+1",
+            "hand",
+            "thumb",
+            "up"
+        ],
+        "unicode": "👍️",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "1F44D-1F3FB",
+                "label": "thumbs up: light skin tone",
+                "order": 332,
+                "unicode": "👍🏻"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F44D-1F3FC",
+                "label": "thumbs up: medium-light skin tone",
+                "order": 333,
+                "unicode": "👍🏼"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F44D-1F3FD",
+                "label": "thumbs up: medium skin tone",
+                "order": 334,
+                "unicode": "👍🏽"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F44D-1F3FE",
+                "label": "thumbs up: medium-dark skin tone",
+                "order": 335,
+                "unicode": "👍🏾"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F44D-1F3FF",
+                "label": "thumbs up: dark skin tone",
+                "order": 336,
+                "unicode": "👍🏿"
+            }
+        ]
+    },
+    "-1": {
         "group": 1,
         "hexcode": "1F44E",
         "label": "thumbs down",
@@ -3090,7 +3311,57 @@
             }
         ]
     },
-    "fist,fist_raised": {
+    "thumbsdown": {
+        "group": 1,
+        "hexcode": "1F44E",
+        "label": "thumbs down",
+        "order": 337,
+        "tags": [
+            "-1",
+            "down",
+            "hand",
+            "thumb"
+        ],
+        "unicode": "👎️",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "1F44E-1F3FB",
+                "label": "thumbs down: light skin tone",
+                "order": 338,
+                "unicode": "👎🏻"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F44E-1F3FC",
+                "label": "thumbs down: medium-light skin tone",
+                "order": 339,
+                "unicode": "👎🏼"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F44E-1F3FD",
+                "label": "thumbs down: medium skin tone",
+                "order": 340,
+                "unicode": "👎🏽"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F44E-1F3FE",
+                "label": "thumbs down: medium-dark skin tone",
+                "order": 341,
+                "unicode": "👎🏾"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F44E-1F3FF",
+                "label": "thumbs down: dark skin tone",
+                "order": 342,
+                "unicode": "👎🏿"
+            }
+        ]
+    },
+    "fist": {
         "group": 1,
         "hexcode": "270A",
         "label": "raised fist",
@@ -3140,7 +3411,157 @@
             }
         ]
     },
-    "facepunch,fist_oncoming,punch": {
+    "fist_raised": {
+        "group": 1,
+        "hexcode": "270A",
+        "label": "raised fist",
+        "order": 343,
+        "tags": [
+            "clenched",
+            "fist",
+            "hand",
+            "punch"
+        ],
+        "unicode": "✊",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "270A-1F3FB",
+                "label": "raised fist: light skin tone",
+                "order": 344,
+                "unicode": "✊🏻"
+            },
+            {
+                "group": 1,
+                "hexcode": "270A-1F3FC",
+                "label": "raised fist: medium-light skin tone",
+                "order": 345,
+                "unicode": "✊🏼"
+            },
+            {
+                "group": 1,
+                "hexcode": "270A-1F3FD",
+                "label": "raised fist: medium skin tone",
+                "order": 346,
+                "unicode": "✊🏽"
+            },
+            {
+                "group": 1,
+                "hexcode": "270A-1F3FE",
+                "label": "raised fist: medium-dark skin tone",
+                "order": 347,
+                "unicode": "✊🏾"
+            },
+            {
+                "group": 1,
+                "hexcode": "270A-1F3FF",
+                "label": "raised fist: dark skin tone",
+                "order": 348,
+                "unicode": "✊🏿"
+            }
+        ]
+    },
+    "facepunch": {
+        "group": 1,
+        "hexcode": "1F44A",
+        "label": "oncoming fist",
+        "order": 349,
+        "tags": [
+            "clenched",
+            "fist",
+            "hand",
+            "punch"
+        ],
+        "unicode": "👊",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "1F44A-1F3FB",
+                "label": "oncoming fist: light skin tone",
+                "order": 350,
+                "unicode": "👊🏻"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F44A-1F3FC",
+                "label": "oncoming fist: medium-light skin tone",
+                "order": 351,
+                "unicode": "👊🏼"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F44A-1F3FD",
+                "label": "oncoming fist: medium skin tone",
+                "order": 352,
+                "unicode": "👊🏽"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F44A-1F3FE",
+                "label": "oncoming fist: medium-dark skin tone",
+                "order": 353,
+                "unicode": "👊🏾"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F44A-1F3FF",
+                "label": "oncoming fist: dark skin tone",
+                "order": 354,
+                "unicode": "👊🏿"
+            }
+        ]
+    },
+    "fist_oncoming": {
+        "group": 1,
+        "hexcode": "1F44A",
+        "label": "oncoming fist",
+        "order": 349,
+        "tags": [
+            "clenched",
+            "fist",
+            "hand",
+            "punch"
+        ],
+        "unicode": "👊",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "1F44A-1F3FB",
+                "label": "oncoming fist: light skin tone",
+                "order": 350,
+                "unicode": "👊🏻"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F44A-1F3FC",
+                "label": "oncoming fist: medium-light skin tone",
+                "order": 351,
+                "unicode": "👊🏼"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F44A-1F3FD",
+                "label": "oncoming fist: medium skin tone",
+                "order": 352,
+                "unicode": "👊🏽"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F44A-1F3FE",
+                "label": "oncoming fist: medium-dark skin tone",
+                "order": 353,
+                "unicode": "👊🏾"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F44A-1F3FF",
+                "label": "oncoming fist: dark skin tone",
+                "order": 354,
+                "unicode": "👊🏿"
+            }
+        ]
+    },
+    "punch": {
         "group": 1,
         "hexcode": "1F44A",
         "label": "oncoming fist",
@@ -5403,7 +5824,57 @@
             }
         ]
     },
-    "blond_haired_woman,blonde_woman": {
+    "blond_haired_woman": {
+        "group": 1,
+        "hexcode": "1F471-200D-2640-FE0F",
+        "label": "woman: blond hair",
+        "order": 647,
+        "tags": [
+            "blond-haired woman",
+            "blonde",
+            "hair",
+            "woman"
+        ],
+        "unicode": "👱‍♀️",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "1F471-1F3FB-200D-2640-FE0F",
+                "label": "woman: light skin tone, blond hair",
+                "order": 649,
+                "unicode": "👱🏻‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F471-1F3FC-200D-2640-FE0F",
+                "label": "woman: medium-light skin tone, blond hair",
+                "order": 651,
+                "unicode": "👱🏼‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F471-1F3FD-200D-2640-FE0F",
+                "label": "woman: medium skin tone, blond hair",
+                "order": 653,
+                "unicode": "👱🏽‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F471-1F3FE-200D-2640-FE0F",
+                "label": "woman: medium-dark skin tone, blond hair",
+                "order": 655,
+                "unicode": "👱🏾‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F471-1F3FF-200D-2640-FE0F",
+                "label": "woman: dark skin tone, blond hair",
+                "order": 657,
+                "unicode": "👱🏿‍♀️"
+            }
+        ]
+    },
+    "blonde_woman": {
         "group": 1,
         "hexcode": "1F471-200D-2640-FE0F",
         "label": "woman: blond hair",
@@ -5994,7 +6465,7 @@
             }
         ]
     },
-    "ng_man,no_good_man": {
+    "ng_man": {
         "group": 1,
         "hexcode": "1F645-200D-2642-FE0F",
         "label": "man gesturing NO",
@@ -6046,7 +6517,111 @@
             }
         ]
     },
-    "ng_woman,no_good_woman": {
+    "no_good_man": {
+        "group": 1,
+        "hexcode": "1F645-200D-2642-FE0F",
+        "label": "man gesturing NO",
+        "order": 755,
+        "tags": [
+            "forbidden",
+            "gesture",
+            "hand",
+            "man",
+            "man gesturing no",
+            "prohibited"
+        ],
+        "unicode": "🙅‍♂️",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "1F645-1F3FB-200D-2642-FE0F",
+                "label": "man gesturing NO: light skin tone",
+                "order": 757,
+                "unicode": "🙅🏻‍♂️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F645-1F3FC-200D-2642-FE0F",
+                "label": "man gesturing NO: medium-light skin tone",
+                "order": 759,
+                "unicode": "🙅🏼‍♂️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F645-1F3FD-200D-2642-FE0F",
+                "label": "man gesturing NO: medium skin tone",
+                "order": 761,
+                "unicode": "🙅🏽‍♂️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F645-1F3FE-200D-2642-FE0F",
+                "label": "man gesturing NO: medium-dark skin tone",
+                "order": 763,
+                "unicode": "🙅🏾‍♂️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F645-1F3FF-200D-2642-FE0F",
+                "label": "man gesturing NO: dark skin tone",
+                "order": 765,
+                "unicode": "🙅🏿‍♂️"
+            }
+        ]
+    },
+    "ng_woman": {
+        "group": 1,
+        "hexcode": "1F645-200D-2640-FE0F",
+        "label": "woman gesturing NO",
+        "order": 767,
+        "tags": [
+            "forbidden",
+            "gesture",
+            "hand",
+            "prohibited",
+            "woman",
+            "woman gesturing no"
+        ],
+        "unicode": "🙅‍♀️",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "1F645-1F3FB-200D-2640-FE0F",
+                "label": "woman gesturing NO: light skin tone",
+                "order": 769,
+                "unicode": "🙅🏻‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F645-1F3FC-200D-2640-FE0F",
+                "label": "woman gesturing NO: medium-light skin tone",
+                "order": 771,
+                "unicode": "🙅🏼‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F645-1F3FD-200D-2640-FE0F",
+                "label": "woman gesturing NO: medium skin tone",
+                "order": 773,
+                "unicode": "🙅🏽‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F645-1F3FE-200D-2640-FE0F",
+                "label": "woman gesturing NO: medium-dark skin tone",
+                "order": 775,
+                "unicode": "🙅🏾‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F645-1F3FF-200D-2640-FE0F",
+                "label": "woman gesturing NO: dark skin tone",
+                "order": 777,
+                "unicode": "🙅🏿‍♀️"
+            }
+        ]
+    },
+    "no_good_woman": {
         "group": 1,
         "hexcode": "1F645-200D-2640-FE0F",
         "label": "woman gesturing NO",
@@ -6250,7 +6825,7 @@
             }
         ]
     },
-    "information_desk_person,tipping_hand_person": {
+    "information_desk_person": {
         "group": 1,
         "hexcode": "1F481",
         "label": "person tipping hand",
@@ -6301,7 +6876,58 @@
             }
         ]
     },
-    "sassy_man,tipping_hand_man": {
+    "tipping_hand_person": {
+        "group": 1,
+        "hexcode": "1F481",
+        "label": "person tipping hand",
+        "order": 809,
+        "tags": [
+            "hand",
+            "help",
+            "information",
+            "sassy",
+            "tipping"
+        ],
+        "unicode": "💁",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "1F481-1F3FB",
+                "label": "person tipping hand: light skin tone",
+                "order": 810,
+                "unicode": "💁🏻"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F481-1F3FC",
+                "label": "person tipping hand: medium-light skin tone",
+                "order": 811,
+                "unicode": "💁🏼"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F481-1F3FD",
+                "label": "person tipping hand: medium skin tone",
+                "order": 812,
+                "unicode": "💁🏽"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F481-1F3FE",
+                "label": "person tipping hand: medium-dark skin tone",
+                "order": 813,
+                "unicode": "💁🏾"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F481-1F3FF",
+                "label": "person tipping hand: dark skin tone",
+                "order": 814,
+                "unicode": "💁🏿"
+            }
+        ]
+    },
+    "sassy_man": {
         "group": 1,
         "hexcode": "1F481-200D-2642-FE0F",
         "label": "man tipping hand",
@@ -6350,7 +6976,105 @@
             }
         ]
     },
-    "sassy_woman,tipping_hand_woman": {
+    "tipping_hand_man": {
+        "group": 1,
+        "hexcode": "1F481-200D-2642-FE0F",
+        "label": "man tipping hand",
+        "order": 815,
+        "tags": [
+            "man",
+            "sassy",
+            "tipping hand"
+        ],
+        "unicode": "💁‍♂️",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "1F481-1F3FB-200D-2642-FE0F",
+                "label": "man tipping hand: light skin tone",
+                "order": 817,
+                "unicode": "💁🏻‍♂️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F481-1F3FC-200D-2642-FE0F",
+                "label": "man tipping hand: medium-light skin tone",
+                "order": 819,
+                "unicode": "💁🏼‍♂️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F481-1F3FD-200D-2642-FE0F",
+                "label": "man tipping hand: medium skin tone",
+                "order": 821,
+                "unicode": "💁🏽‍♂️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F481-1F3FE-200D-2642-FE0F",
+                "label": "man tipping hand: medium-dark skin tone",
+                "order": 823,
+                "unicode": "💁🏾‍♂️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F481-1F3FF-200D-2642-FE0F",
+                "label": "man tipping hand: dark skin tone",
+                "order": 825,
+                "unicode": "💁🏿‍♂️"
+            }
+        ]
+    },
+    "sassy_woman": {
+        "group": 1,
+        "hexcode": "1F481-200D-2640-FE0F",
+        "label": "woman tipping hand",
+        "order": 827,
+        "tags": [
+            "sassy",
+            "tipping hand",
+            "woman"
+        ],
+        "unicode": "💁‍♀️",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "1F481-1F3FB-200D-2640-FE0F",
+                "label": "woman tipping hand: light skin tone",
+                "order": 829,
+                "unicode": "💁🏻‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F481-1F3FC-200D-2640-FE0F",
+                "label": "woman tipping hand: medium-light skin tone",
+                "order": 831,
+                "unicode": "💁🏼‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F481-1F3FD-200D-2640-FE0F",
+                "label": "woman tipping hand: medium skin tone",
+                "order": 833,
+                "unicode": "💁🏽‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F481-1F3FE-200D-2640-FE0F",
+                "label": "woman tipping hand: medium-dark skin tone",
+                "order": 835,
+                "unicode": "💁🏾‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F481-1F3FF-200D-2640-FE0F",
+                "label": "woman tipping hand: dark skin tone",
+                "order": 837,
+                "unicode": "💁🏿‍♀️"
+            }
+        ]
+    },
+    "tipping_hand_woman": {
         "group": 1,
         "hexcode": "1F481-200D-2640-FE0F",
         "label": "woman tipping hand",
@@ -9532,7 +10256,56 @@
             }
         ]
     },
-    "cop,police_officer": {
+    "cop": {
+        "group": 1,
+        "hexcode": "1F46E",
+        "label": "police officer",
+        "order": 1331,
+        "tags": [
+            "cop",
+            "officer",
+            "police"
+        ],
+        "unicode": "👮",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "1F46E-1F3FB",
+                "label": "police officer: light skin tone",
+                "order": 1332,
+                "unicode": "👮🏻"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F46E-1F3FC",
+                "label": "police officer: medium-light skin tone",
+                "order": 1333,
+                "unicode": "👮🏼"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F46E-1F3FD",
+                "label": "police officer: medium skin tone",
+                "order": 1334,
+                "unicode": "👮🏽"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F46E-1F3FE",
+                "label": "police officer: medium-dark skin tone",
+                "order": 1335,
+                "unicode": "👮🏾"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F46E-1F3FF",
+                "label": "police officer: dark skin tone",
+                "order": 1336,
+                "unicode": "👮🏿"
+            }
+        ]
+    },
+    "police_officer": {
         "group": 1,
         "hexcode": "1F46E",
         "label": "police officer",
@@ -10750,7 +11523,55 @@
             }
         ]
     },
-    "bride_with_veil,woman_with_veil": {
+    "bride_with_veil": {
+        "group": 1,
+        "hexcode": "1F470-200D-2640-FE0F",
+        "label": "woman with veil",
+        "order": 1570,
+        "tags": [
+            "veil",
+            "woman"
+        ],
+        "unicode": "👰‍♀️",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "1F470-1F3FB-200D-2640-FE0F",
+                "label": "woman with veil: light skin tone",
+                "order": 1572,
+                "unicode": "👰🏻‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F470-1F3FC-200D-2640-FE0F",
+                "label": "woman with veil: medium-light skin tone",
+                "order": 1574,
+                "unicode": "👰🏼‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F470-1F3FD-200D-2640-FE0F",
+                "label": "woman with veil: medium skin tone",
+                "order": 1576,
+                "unicode": "👰🏽‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F470-1F3FE-200D-2640-FE0F",
+                "label": "woman with veil: medium-dark skin tone",
+                "order": 1578,
+                "unicode": "👰🏾‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F470-1F3FF-200D-2640-FE0F",
+                "label": "woman with veil: dark skin tone",
+                "order": 1580,
+                "unicode": "👰🏿‍♀️"
+            }
+        ]
+    },
+    "woman_with_veil": {
         "group": 1,
         "hexcode": "1F470-200D-2640-FE0F",
         "label": "woman with veil",
@@ -13499,7 +14320,55 @@
             }
         ]
     },
-    "runner,running": {
+    "runner": {
+        "group": 1,
+        "hexcode": "1F3C3",
+        "label": "person running",
+        "order": 2073,
+        "tags": [
+            "marathon",
+            "running"
+        ],
+        "unicode": "🏃",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "1F3C3-1F3FB",
+                "label": "person running: light skin tone",
+                "order": 2074,
+                "unicode": "🏃🏻"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F3C3-1F3FC",
+                "label": "person running: medium-light skin tone",
+                "order": 2075,
+                "unicode": "🏃🏼"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F3C3-1F3FD",
+                "label": "person running: medium skin tone",
+                "order": 2076,
+                "unicode": "🏃🏽"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F3C3-1F3FE",
+                "label": "person running: medium-dark skin tone",
+                "order": 2077,
+                "unicode": "🏃🏾"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F3C3-1F3FF",
+                "label": "person running: dark skin tone",
+                "order": 2078,
+                "unicode": "🏃🏿"
+            }
+        ]
+    },
+    "running": {
         "group": 1,
         "hexcode": "1F3C3",
         "label": "person running",
@@ -13647,7 +14516,56 @@
             }
         ]
     },
-    "dancer,woman_dancing": {
+    "dancer": {
+        "group": 1,
+        "hexcode": "1F483",
+        "label": "woman dancing",
+        "order": 2103,
+        "tags": [
+            "dance",
+            "dancing",
+            "woman"
+        ],
+        "unicode": "💃",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "1F483-1F3FB",
+                "label": "woman dancing: light skin tone",
+                "order": 2104,
+                "unicode": "💃🏻"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F483-1F3FC",
+                "label": "woman dancing: medium-light skin tone",
+                "order": 2105,
+                "unicode": "💃🏼"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F483-1F3FD",
+                "label": "woman dancing: medium skin tone",
+                "order": 2106,
+                "unicode": "💃🏽"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F483-1F3FE",
+                "label": "woman dancing: medium-dark skin tone",
+                "order": 2107,
+                "unicode": "💃🏾"
+            },
+            {
+                "group": 1,
+                "hexcode": "1F483-1F3FF",
+                "label": "woman dancing: dark skin tone",
+                "order": 2108,
+                "unicode": "💃🏿"
+            }
+        ]
+    },
+    "woman_dancing": {
         "group": 1,
         "hexcode": "1F483",
         "label": "woman dancing",
@@ -14862,7 +15780,7 @@
             }
         ]
     },
-    "basketball_man,bouncing_ball_man": {
+    "basketball_man": {
         "group": 1,
         "hexcode": "26F9-FE0F-200D-2642-FE0F",
         "label": "man bouncing ball",
@@ -14910,7 +15828,103 @@
             }
         ]
     },
-    "basketball_woman,bouncing_ball_woman": {
+    "bouncing_ball_man": {
+        "group": 1,
+        "hexcode": "26F9-FE0F-200D-2642-FE0F",
+        "label": "man bouncing ball",
+        "order": 2334,
+        "tags": [
+            "ball",
+            "man"
+        ],
+        "unicode": "⛹️‍♂️",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "26F9-1F3FB-200D-2642-FE0F",
+                "label": "man bouncing ball: light skin tone",
+                "order": 2338,
+                "unicode": "⛹🏻‍♂️"
+            },
+            {
+                "group": 1,
+                "hexcode": "26F9-1F3FC-200D-2642-FE0F",
+                "label": "man bouncing ball: medium-light skin tone",
+                "order": 2340,
+                "unicode": "⛹🏼‍♂️"
+            },
+            {
+                "group": 1,
+                "hexcode": "26F9-1F3FD-200D-2642-FE0F",
+                "label": "man bouncing ball: medium skin tone",
+                "order": 2342,
+                "unicode": "⛹🏽‍♂️"
+            },
+            {
+                "group": 1,
+                "hexcode": "26F9-1F3FE-200D-2642-FE0F",
+                "label": "man bouncing ball: medium-dark skin tone",
+                "order": 2344,
+                "unicode": "⛹🏾‍♂️"
+            },
+            {
+                "group": 1,
+                "hexcode": "26F9-1F3FF-200D-2642-FE0F",
+                "label": "man bouncing ball: dark skin tone",
+                "order": 2346,
+                "unicode": "⛹🏿‍♂️"
+            }
+        ]
+    },
+    "basketball_woman": {
+        "group": 1,
+        "hexcode": "26F9-FE0F-200D-2640-FE0F",
+        "label": "woman bouncing ball",
+        "order": 2348,
+        "tags": [
+            "ball",
+            "woman"
+        ],
+        "unicode": "⛹️‍♀️",
+        "skins": [
+            {
+                "group": 1,
+                "hexcode": "26F9-1F3FB-200D-2640-FE0F",
+                "label": "woman bouncing ball: light skin tone",
+                "order": 2352,
+                "unicode": "⛹🏻‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "26F9-1F3FC-200D-2640-FE0F",
+                "label": "woman bouncing ball: medium-light skin tone",
+                "order": 2354,
+                "unicode": "⛹🏼‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "26F9-1F3FD-200D-2640-FE0F",
+                "label": "woman bouncing ball: medium skin tone",
+                "order": 2356,
+                "unicode": "⛹🏽‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "26F9-1F3FE-200D-2640-FE0F",
+                "label": "woman bouncing ball: medium-dark skin tone",
+                "order": 2358,
+                "unicode": "⛹🏾‍♀️"
+            },
+            {
+                "group": 1,
+                "hexcode": "26F9-1F3FF-200D-2640-FE0F",
+                "label": "woman bouncing ball: dark skin tone",
+                "order": 2360,
+                "unicode": "⛹🏿‍♀️"
+            }
+        ]
+    },
+    "bouncing_ball_woman": {
         "group": 1,
         "hexcode": "26F9-FE0F-200D-2640-FE0F",
         "label": "woman bouncing ball",
@@ -19609,7 +20623,19 @@
         ],
         "unicode": "🦡"
     },
-    "feet,paw_prints": {
+    "feet": {
+        "group": 3,
+        "hexcode": "1F43E",
+        "label": "paw prints",
+        "order": 3238,
+        "tags": [
+            "feet",
+            "paw",
+            "print"
+        ],
+        "unicode": "🐾"
+    },
+    "paw_prints": {
         "group": 3,
         "hexcode": "1F43E",
         "label": "paw prints",
@@ -19945,7 +20971,17 @@
         ],
         "unicode": "🐋"
     },
-    "dolphin,flipper": {
+    "dolphin": {
+        "group": 3,
+        "hexcode": "1F42C",
+        "label": "dolphin",
+        "order": 3269,
+        "tags": [
+            "flipper"
+        ],
+        "unicode": "🐬"
+    },
+    "flipper": {
         "group": 3,
         "hexcode": "1F42C",
         "label": "dolphin",
@@ -20069,7 +21105,18 @@
         ],
         "unicode": "🐜"
     },
-    "bee,honeybee": {
+    "bee": {
+        "group": 3,
+        "hexcode": "1F41D",
+        "label": "honeybee",
+        "order": 3282,
+        "tags": [
+            "bee",
+            "insect"
+        ],
+        "unicode": "🐝"
+    },
+    "honeybee": {
         "group": 3,
         "hexcode": "1F41D",
         "label": "honeybee",
@@ -20494,7 +21541,29 @@
         ],
         "unicode": "🍉"
     },
-    "mandarin,orange,tangerine": {
+    "mandarin": {
+        "group": 4,
+        "hexcode": "1F34A",
+        "label": "tangerine",
+        "order": 3327,
+        "tags": [
+            "fruit",
+            "orange"
+        ],
+        "unicode": "🍊"
+    },
+    "orange": {
+        "group": 4,
+        "hexcode": "1F34A",
+        "label": "tangerine",
+        "order": 3327,
+        "tags": [
+            "fruit",
+            "orange"
+        ],
+        "unicode": "🍊"
+    },
+    "tangerine": {
         "group": 4,
         "hexcode": "1F34A",
         "label": "tangerine",
@@ -21965,7 +23034,21 @@
         ],
         "unicode": "🥄"
     },
-    "hocho,knife": {
+    "hocho": {
+        "group": 4,
+        "hexcode": "1F52A",
+        "label": "kitchen knife",
+        "order": 3455,
+        "tags": [
+            "cooking",
+            "hocho",
+            "knife",
+            "tool",
+            "weapon"
+        ],
+        "unicode": "🔪"
+    },
+    "knife": {
         "group": 4,
         "hexcode": "1F52A",
         "label": "kitchen knife",
@@ -22980,7 +24063,17 @@
         ],
         "unicode": "🚖"
     },
-    "car,red_car": {
+    "car": {
+        "group": 5,
+        "hexcode": "1F697",
+        "label": "automobile",
+        "order": 3562,
+        "tags": [
+            "car"
+        ],
+        "unicode": "🚗"
+    },
+    "red_car": {
         "group": 5,
         "hexcode": "1F697",
         "label": "automobile",
@@ -23292,7 +24385,20 @@
         ],
         "unicode": "⚓️"
     },
-    "boat,sailboat": {
+    "boat": {
+        "group": 5,
+        "hexcode": "26F5",
+        "label": "sailboat",
+        "order": 3597,
+        "tags": [
+            "boat",
+            "resort",
+            "sea",
+            "yacht"
+        ],
+        "unicode": "⛵️"
+    },
+    "sailboat": {
         "group": 5,
         "hexcode": "26F5",
         "label": "sailboat",
@@ -23997,7 +25103,19 @@
         ],
         "unicode": "🌓"
     },
-    "moon,waxing_gibbous_moon": {
+    "moon": {
+        "group": 5,
+        "hexcode": "1F314",
+        "label": "waxing gibbous moon",
+        "order": 3663,
+        "tags": [
+            "gibbous",
+            "moon",
+            "waxing"
+        ],
+        "unicode": "🌔"
+    },
+    "waxing_gibbous_moon": {
         "group": 5,
         "hexcode": "1F314",
         "label": "waxing gibbous moon",
@@ -25593,7 +26711,19 @@
         ],
         "unicode": "👔"
     },
-    "shirt,tshirt": {
+    "shirt": {
+        "group": 7,
+        "hexcode": "1F455",
+        "label": "t-shirt",
+        "order": 3829,
+        "tags": [
+            "clothing",
+            "shirt",
+            "tshirt"
+        ],
+        "unicode": "👕"
+    },
+    "tshirt": {
         "group": 7,
         "hexcode": "1F455",
         "label": "t-shirt",
@@ -25819,7 +26949,19 @@
         ],
         "unicode": "🩴"
     },
-    "mans_shoe,shoe": {
+    "mans_shoe": {
+        "group": 7,
+        "hexcode": "1F45E",
+        "label": "man’s shoe",
+        "order": 3850,
+        "tags": [
+            "clothing",
+            "man",
+            "shoe"
+        ],
+        "unicode": "👞"
+    },
+    "shoe": {
         "group": 7,
         "hexcode": "1F45E",
         "label": "man’s shoe",
@@ -26388,7 +27530,17 @@
         ],
         "unicode": "📲"
     },
-    "phone,telephone": {
+    "phone": {
+        "group": 7,
+        "hexcode": "260E",
+        "label": "telephone",
+        "order": 3903,
+        "tags": [
+            "phone"
+        ],
+        "unicode": "☎️"
+    },
+    "telephone": {
         "group": 7,
         "hexcode": "260E",
         "label": "telephone",
@@ -26745,7 +27897,20 @@
         ],
         "unicode": "🔦"
     },
-    "izakaya_lantern,lantern": {
+    "izakaya_lantern": {
+        "group": 7,
+        "hexcode": "1F3EE",
+        "label": "red paper lantern",
+        "order": 3943,
+        "tags": [
+            "bar",
+            "lantern",
+            "light",
+            "red"
+        ],
+        "unicode": "🏮"
+    },
+    "lantern": {
         "group": 7,
         "hexcode": "1F3EE",
         "label": "red paper lantern",
@@ -26794,7 +27959,18 @@
         ],
         "unicode": "📕"
     },
-    "book,open_book": {
+    "book": {
+        "group": 7,
+        "hexcode": "1F4D6",
+        "label": "open book",
+        "order": 3947,
+        "tags": [
+            "book",
+            "open"
+        ],
+        "unicode": "📖"
+    },
+    "open_book": {
         "group": 7,
         "hexcode": "1F4D6",
         "label": "open book",
@@ -27109,7 +28285,19 @@
         ],
         "unicode": "✉️"
     },
-    "e-mail,email": {
+    "e-mail": {
+        "group": 7,
+        "hexcode": "1F4E7",
+        "label": "e-mail",
+        "order": 3976,
+        "tags": [
+            "email",
+            "letter",
+            "mail"
+        ],
+        "unicode": "📧"
+    },
+    "email": {
         "group": 7,
         "hexcode": "1F4E7",
         "label": "e-mail",
@@ -27329,7 +28517,17 @@
         ],
         "unicode": "🖍️"
     },
-    "memo,pencil": {
+    "memo": {
+        "group": 7,
+        "hexcode": "1F4DD",
+        "label": "memo",
+        "order": 4001,
+        "tags": [
+            "pencil"
+        ],
+        "unicode": "📝"
+    },
+    "pencil": {
         "group": 7,
         "hexcode": "1F4DD",
         "label": "memo",
@@ -29822,7 +31020,20 @@
         ],
         "unicode": "❕"
     },
-    "exclamation,heavy_exclamation_mark": {
+    "exclamation": {
+        "group": 8,
+        "hexcode": "2757",
+        "label": "red exclamation mark",
+        "order": 4278,
+        "tags": [
+            "!",
+            "exclamation",
+            "mark",
+            "punctuation"
+        ],
+        "unicode": "❗️"
+    },
+    "heavy_exclamation_mark": {
         "group": 8,
         "hexcode": "2757",
         "label": "red exclamation mark",
@@ -32021,7 +33232,18 @@
         ],
         "unicode": "🇪🇹"
     },
-    "eu,european_union": {
+    "eu": {
+        "group": 9,
+        "hexcode": "1F1EA-1F1FA",
+        "label": "flag: European Union",
+        "order": 4515,
+        "tags": [
+            "EU",
+            "flag"
+        ],
+        "unicode": "🇪🇺"
+    },
+    "european_union": {
         "group": 9,
         "hexcode": "1F1EA-1F1FA",
         "label": "flag: European Union",
@@ -32109,7 +33331,18 @@
         ],
         "unicode": "🇬🇦"
     },
-    "gb,uk": {
+    "gb": {
+        "group": 9,
+        "hexcode": "1F1EC-1F1E7",
+        "label": "flag: United Kingdom",
+        "order": 4523,
+        "tags": [
+            "GB",
+            "flag"
+        ],
+        "unicode": "🇬🇧"
+    },
+    "uk": {
         "group": 9,
         "hexcode": "1F1EC-1F1E7",
         "label": "flag: United Kingdom",
@@ -34090,107 +35323,24 @@
         "unicode": "🏴󠁧󠁢󠁷󠁬󠁳󠁿"
     },
     "github_exclusive": {
-        "+1": "👍",
-        "-1": "👎",
         "atom": "\n",
         "basecamp": "º",
         "basecampy": "º",
-        "basketball_man": "⛹♂",
-        "basketball_woman": "⛹♀",
-        "bee": "🐝",
-        "blond_haired_woman": "👱♀",
-        "blonde_woman": "👱♀",
-        "boat": "⛵",
-        "book": "📖",
-        "boom": "💥",
-        "bouncing_ball_man": "⛹♂",
-        "bouncing_ball_woman": "⛹♀",
         "bowtie": "\u000b",
-        "bride_with_veil": "👰♀",
-        "car": "🚗",
-        "collision": "💥",
-        "cop": "👮",
-        "dancer": "💃",
-        "dolphin": "🐬",
-        "e-mail": "📧",
         "electron": "\u000e",
-        "email": "📧",
-        "eu": "🇪🇺",
-        "european_union": "🇪🇺",
-        "exclamation": "❗",
-        "facepunch": "👊",
         "feelsgood": "࿮",
-        "feet": "🐾",
         "finnadie": "\u000f",
-        "fist": "✊",
-        "fist_oncoming": "👊",
-        "fist_raised": "✊",
-        "flipper": "🐬",
-        "fu": "🖕",
-        "gb": "🇬🇧",
         "goberserk": "GOBERSERK",
         "godmode": "GODMODE",
-        "hand": "✋",
-        "hankey": "💩",
-        "heavy_exclamation_mark": "❗",
-        "hocho": "🔪",
-        "honeybee": "🐝",
         "hurtrealbad": "HURTREALBAD",
-        "information_desk_person": "💁",
-        "izakaya_lantern": "🏮",
-        "knife": "🔪",
-        "lantern": "🏮",
-        "laughing": "😆",
-        "mandarin": "🍊",
-        "mans_shoe": "👞",
-        "memo": "📝",
-        "middle_finger": "🖕",
-        "moon": "🌔",
         "neckbeard": "NECKBEARD",
-        "ng_man": "🙅♂",
-        "ng_woman": "🙅♀",
-        "no_good_man": "🙅♂",
-        "no_good_woman": "🙅♀",
         "octocat": "OCTOCAT",
-        "open_book": "📖",
-        "orange": "🍊",
-        "paw_prints": "🐾",
-        "pencil": "📝",
-        "phone": "☎",
-        "police_officer": "👮",
-        "poop": "💩",
-        "pout": "😡",
-        "punch": "👊",
-        "rage": "😡",
         "rage1": "RAGE1",
         "rage2": "RAGE2",
         "rage3": "RAGE3",
         "rage4": "RAGE4",
-        "raised_hand": "✋",
-        "red_car": "🚗",
-        "runner": "🏃",
-        "running": "🏃",
-        "sailboat": "⛵",
-        "sassy_man": "💁♂",
-        "sassy_woman": "💁♀",
-        "satisfied": "😆",
         "shipit": "SHIPIT",
-        "shirt": "👕",
-        "shit": "💩",
-        "shoe": "👞",
         "suspect": "SUSPECT",
-        "tangerine": "🍊",
-        "telephone": "☎",
-        "thumbsdown": "👎",
-        "thumbsup": "👍",
-        "tipping_hand_man": "💁♂",
-        "tipping_hand_person": "💁",
-        "tipping_hand_woman": "💁♀",
-        "trollface": "TROLLFACE",
-        "tshirt": "👕",
-        "uk": "🇬🇧",
-        "waxing_gibbous_moon": "🌔",
-        "woman_dancing": "💃",
-        "woman_with_veil": "👰♀"
+        "trollface": "TROLLFACE"
     }
 }
