@@ -69,25 +69,24 @@ async function main() {
     emojis_details.forEach(emoji => {
         if(emoji['hexcode'] in emoji_shortcodes){
             shortcode_name = emoji_shortcodes[emoji['hexcode']]
-            // if(Array.isArray(shortcode_name)){
-            //     shortcode_name.forEach(shortcode => {
-            //         shortcodes[shortcode] = emoji
-            //     });
-            // }
-            // else
-            //     shortcodes[shortcode_name] = emoji
+            if(!Array.isArray(shortcode_name)){
+                shortcode_name = [shortcode_name]
+            }
             emoji["shortcode"] = shortcode_name
             shortcodes.push(emoji)
         }
     });
-    // var github_exclusive = {}
-    // Object.entries(github_emojis).forEach(emoji => {
-    //     if(!(emoji[0] in shortcodes)){
-    //         github_exclusive[emoji[0]] = emoji[1]
-    //     }
-    // });
+    var github_exclusive = {}
+    Object.entries(github_emojis).forEach(github_emoji => {
+        var emoji_found = shortcodes.findIndex(function(emoji, index) {
+            if(emoji['shortcode'].includes(github_emoji[0]))
+                return true;
+        });
+        if(emoji_found == -1)
+            github_exclusive[github_emoji[0]] = github_emoji[1]
+    });
 
-    // shortcodes["github_exclusive"] = github_exclusive
+    shortcodes.push(github_exclusive)
 
 
     const emoji_cons_file_path = path.join("data", "emoji_cons.json");
