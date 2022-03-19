@@ -38,13 +38,16 @@ async function main() {
 
     // const emoji_shortcodes = await axios.get("https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/shortcodes/github.json");
     // const emojis_details = await axios.get("https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/compact.json");
+    // const emojis_groups = await axios.get("https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/messages.json");
     const emoji_shortcodes_file_path = path.join("data", "emojibase_shortcodes.json");
     const emojis_details_file_path = path.join("data", "emojibase_details.json");
+    const emojis_groups_file_path = path.join("data", "emojibase_groups.json");
 
 
     // try {
     //     fs.writeFileSync(emoji_shortcodes_file_path, JSON.stringify(emoji_shortcodes.data, null, 4));
     //     fs.writeFileSync(emojis_details_file_path, JSON.stringify(emojis_details.data, null, 4));
+    //     fs.writeFileSync(emojis_groups_file_path, JSON.stringify(emojis_groups.data, null, 4));
     // } catch (err) {
     //     console.error(err);
     // }
