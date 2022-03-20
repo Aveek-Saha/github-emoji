@@ -37,7 +37,7 @@ async function main() {
     // }
 
     // const emoji_shortcodes = await axios.get("https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/shortcodes/github.json");
-    // const emojis_details = await axios.get("https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/compact.json");
+    // const emojis_details = await axios.get("https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/data.json");
     // const emojis_groups = await axios.get("https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/messages.json");
     const emoji_shortcodes_file_path = path.join("data", "emojibase_shortcodes.json");
     const emojis_details_file_path = path.join("data", "emojibase_details.json");
@@ -65,6 +65,11 @@ async function main() {
                 shortcode_name = [shortcode_name]
             }
             emoji["shortcode"] = shortcode_name
+            delete emoji["hexcode"];
+            delete emoji["text"];
+            delete emoji["type"];
+            delete emoji["order"];
+            delete emoji["version"];
             shortcodes.push(emoji)
         }
     });
