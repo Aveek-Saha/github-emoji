@@ -54,6 +54,7 @@ async function main() {
 
     const emoji_shortcodes = JSON.parse(fs.readFileSync(emoji_shortcodes_file_path, 'utf-8'))
     const emojis_details = JSON.parse(fs.readFileSync(emojis_details_file_path, 'utf-8'))
+    const emojis_groups = JSON.parse(fs.readFileSync(emojis_groups_file_path, 'utf-8'))
     const github_emojis = JSON.parse(fs.readFileSync(file_path, 'utf-8'))
 
     var shortcodes = []
@@ -70,6 +71,13 @@ async function main() {
             delete emoji["type"];
             delete emoji["order"];
             delete emoji["version"];
+
+            var group = emojis_groups["groups"].find((e) => e.order == emoji["group"]);
+            var subgroup = emojis_groups["subgroups"].find((e) => e.order == emoji["subgroup"]);
+
+            emoji["group"] = group["message"]
+            emoji["subgroup"] = subgroup["message"]
+
             shortcodes.push(emoji)
         }
     });
