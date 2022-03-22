@@ -71,6 +71,9 @@ async function main() {
             delete emoji["type"];
             delete emoji["order"];
             delete emoji["version"];
+            delete emoji["skins"];
+            delete emoji["gender"];
+            delete emoji["emoticon"];
 
             var group = emojis_groups["groups"].find((e) => e.order == emoji["group"]);
             var subgroup = emojis_groups["subgroups"].find((e) => e.order == emoji["subgroup"]);
