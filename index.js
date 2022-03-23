@@ -2,60 +2,55 @@ const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
 
-const { fromHexcodeToCodepoint, fromCodepointToUnicode, fetchShortcodes } = require("emojibase");
+const GITHUB_EMOJI_URL = "https://api.github.com/emojis"
+const EMOJI_SHORTCODES_URL = "https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/shortcodes/github.json"
+const EMOJI_DETAILS_URL = "https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/data.json"
+const EMOJI_GROUPS_URL = "https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/messages.json"
 
-const config = require("./config.json")
+const github_file_path = path.join("data", "github_emojis.json");
+const emoji_shortcodes_file_path = path.join("data", "emojibase_shortcodes.json");
+const emojis_details_file_path = path.join("data", "emojibase_details.json");
+const emojis_groups_file_path = path.join("data", "emojibase_groups.json");
 
-// import ifEmoji from "if-emoji";
+function writeData(file_path, data) {
+    try {
+        fs.writeFileSync(file_path, JSON.stringify(data, null, 4));
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+function readData(file_path) {
+    const data = JSON.parse(fs.readFileSync(file_path, 'utf-8'))
+    return data
+}
+
+async function fetchData(URL) {
+    const emoji_data = await axios.get(URL);
+    return emoji_data.data
+
+}
 
 async function main() {
-    // const githubEmojis = await axios.get("https://api.github.com/emojis");
-    const file_path = path.join("data", "github_emojis.json");
 
-    // var ghEmojiArr = Object.entries(githubEmojis.data);
-    // var emojis = {};
-    // ghEmojiArr.forEach((em) => {
-    //     if(!em[1].includes("unicode"))
-    //         emojis[em[0]] = em[1];
-    // });
+    const github_emojis = await fetchData(GITHUB_EMOJI_URL);
 
-    // try {
-    //     fs.writeFileSync(file_path, JSON.stringify(emojis, null, 4));
-    // } catch (err) {
-    //     console.error(err);
-    // }
+    var github_emojis_arr = Object.entries(github_emojis);
+    var exclusive_emojis = {};
+    github_emojis_arr.forEach((em) => {
+        if(!em[1].includes("unicode"))
+        exclusive_emojis[em[0]] = em[1];
+    });
 
-    // const emojiApi = await axios.get("https://emoji-api.com/emojis?access_key=" + config.emoji_api);
-    // const emojApi_file_path = path.join("data", "emoji_api.json");
+    writeData(github_file_path, exclusive_emojis)
 
-    // const emojiApi_data = emojiApi.data
+    const emoji_shortcodes = await fetchData(EMOJI_SHORTCODES_URL);
+    const emojis_details = await fetchData(EMOJI_DETAILS_URL);
+    const emojis_groups = await fetchData(EMOJI_GROUPS_URL);
 
-    // try {
-    //     fs.writeFileSync(emojApi_file_path, JSON.stringify(emojiApi_data, null, 4));
-    // } catch (err) {
-    //     console.error(err);
-    // }
-
-    // const emoji_shortcodes = await axios.get("https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/shortcodes/github.json");
-    // const emojis_details = await axios.get("https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/data.json");
-    // const emojis_groups = await axios.get("https://cdn.jsdelivr.net/npm/emojibase-data@latest/en/messages.json");
-    const emoji_shortcodes_file_path = path.join("data", "emojibase_shortcodes.json");
-    const emojis_details_file_path = path.join("data", "emojibase_details.json");
-    const emojis_groups_file_path = path.join("data", "emojibase_groups.json");
-
-
-    // try {
-    //     fs.writeFileSync(emoji_shortcodes_file_path, JSON.stringify(emoji_shortcodes.data, null, 4));
-    //     fs.writeFileSync(emojis_details_file_path, JSON.stringify(emojis_details.data, null, 4));
-    //     fs.writeFileSync(emojis_groups_file_path, JSON.stringify(emojis_groups.data, null, 4));
-    // } catch (err) {
-    //     console.error(err);
-    // }
-
-    const emoji_shortcodes = JSON.parse(fs.readFileSync(emoji_shortcodes_file_path, 'utf-8'))
-    const emojis_details = JSON.parse(fs.readFileSync(emojis_details_file_path, 'utf-8'))
-    const emojis_groups = JSON.parse(fs.readFileSync(emojis_groups_file_path, 'utf-8'))
-    const github_emojis = JSON.parse(fs.readFileSync(file_path, 'utf-8'))
+    writeData(emoji_shortcodes_file_path, emoji_shortcodes)
+    writeData(emojis_details_file_path, emojis_details)
+    writeData(emojis_groups_file_path, emojis_groups)
 
     var shortcodes = []
 
@@ -85,16 +80,11 @@ async function main() {
         }
     });
 
-    shortcodes.push(github_emojis)
-
+    shortcodes.push(exclusive_emojis)
 
     const emoji_cons_file_path = path.join("data", "emoji_cons.json");
 
-    try {
-        fs.writeFileSync(emoji_cons_file_path, JSON.stringify(shortcodes, null, 4));
-    } catch (err) {
-        console.error(err);
-    }
+    writeData(emoji_cons_file_path, shortcodes)
 
 }
 
