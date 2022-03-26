@@ -14,7 +14,7 @@ const github_path = path.join("data", "github_emojis.json");
 const emoji_shortcodes_path = path.join("data", "emojibase_shortcodes.json");
 const emojis_details_path = path.join("data", "emojibase_details.json");
 const emojis_groups_path = path.join("data", "emojibase_groups.json");
-const emoji_cons_path = path.join("data", "emoji_cons.json");
+const emoji_cons_path = path.join("data", "github_emoji_shortcodes.json");
 
 function writeData(file_path, data) {
     try {
@@ -43,16 +43,17 @@ async function main() {
         if (!em[1].includes("unicode")) exclusive_emojis[em[0]] = em[1];
     });
 
-    writeData(github_path, exclusive_emojis);
+    // writeData(github_path, exclusive_emojis);
 
     const emoji_shortcodes = await fetchData(SHORTCODES_URL);
     const emojis_details = await fetchData(DETAILS_URL);
     const emojis_groups = await fetchData(GROUPS_URL);
 
-    writeData(emoji_shortcodes_path, emoji_shortcodes);
-    writeData(emojis_details_path, emojis_details);
-    writeData(emojis_groups_path, emojis_groups);
+    // writeData(emoji_shortcodes_path, emoji_shortcodes);
+    // writeData(emojis_details_path, emojis_details);
+    // writeData(emojis_groups_path, emojis_groups);
 
+    var all_emoji = {};
     var shortcodes = [];
 
     emojis_details.forEach((emoji) => {
@@ -85,9 +86,10 @@ async function main() {
         }
     });
 
-    shortcodes.push(exclusive_emojis);
+    all_emoji["common"] = shortcodes;
+    all_emoji["exclusive"] = exclusive_emojis;
 
-    writeData(emoji_cons_path, shortcodes);
+    writeData(emoji_cons_path, all_emoji);
 }
 
 main();
