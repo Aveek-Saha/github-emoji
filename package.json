@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/Aveek-Saha/gmoji#readme",
   "dependencies": {
-    "axios": "^0.26.1",
-    "emojibase": "^6.1.0"
+    "axios": "^0.26.1"
   }
 }
