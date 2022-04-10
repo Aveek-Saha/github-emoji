@@ -7,7 +7,7 @@
 
 <main>
     <div class="container">
-        <div class="row row-cols-6 row-cols-sm-2 row-cols-md-4 row-cols-xs-1">
+        <div class="row row-cols-lg-6 row-cols-sm-2 row-cols-md-6 row-cols-xs-1">
             {#each common as emoji}
                 <div class="col mb-3 text-center">
                     <div class="card h-100">
