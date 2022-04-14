@@ -1,6 +1,7 @@
 <script>
 	import { SvelteToast, toast } from "@zerodevx/svelte-toast";
 	const options = {};
+	new ClipboardJS(".card");
     export let emojis;
     let common = emojis["common"];
 	let search = "";
@@ -57,7 +58,7 @@
         <div class="row row-cols-lg-6 row-cols-sm-2 row-cols-md-4 row-cols-xs-1">
             {#each list as emoji}
                 <div class="col mb-3 text-center">
-                    <div class="card h-100" on:click={() => createToast()}>
+                    <div class="card h-100" data-clipboard-text=":{emoji.shortcode[0]}:" on:click={() => createToast()}>
                         <div class="card-header" style="background-color: {colors[Math.floor(Math.random()*colors.length)]};">
                             <p class="emoji">{emoji.emoji}</p>
                         </div>
