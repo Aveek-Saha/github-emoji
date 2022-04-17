@@ -1,4 +1,4 @@
-# GitHub Emoji :smiley:
+# GitHub Emoji :mag:
 
 A handy resource for developers struggling to remember shortcodes for GitHub emoji. Search for the emoji and just click the card to copy!
 
