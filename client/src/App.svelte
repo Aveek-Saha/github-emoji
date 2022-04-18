@@ -1,14 +1,14 @@
 <script>
-	import { SvelteToast, toast } from "@zerodevx/svelte-toast";
-	const options = {};
-	new ClipboardJS(".card");
+    import { SvelteToast, toast } from "@zerodevx/svelte-toast";
+    const options = {};
+    new ClipboardJS(".card");
     export let emojis;
     export let color_codes;
     let common = emojis["common"];
     let colors = color_codes["hex_codes"];
-	let search = "";
+    let search = "";
 
-	function createToast() {
+    function createToast() {
         toast.pop();
         toast.push("Emoji shortname copied!", {
             theme: {
@@ -19,17 +19,18 @@
         });
     }
 
-	$: list = common
+    $: list = common
         ? common.filter(
               (item) =>
-                  (item.tags.join(" ")+item.shortcode.join(" ")+item.label).toLowerCase().indexOf(search.toLowerCase()) !== -1
+                  (item.tags.join(" ") + item.shortcode.join(" ") + item.label)
+                      .toLowerCase()
+                      .indexOf(search.toLowerCase()) !== -1
           )
         : [];
 </script>
 
 <main>
     <div class="container">
-		
         <div class="row">
             <header class="header mt-5 mb-4">
                 <h1 class="header__title">GitHub Emoji</h1>
@@ -55,11 +56,22 @@
                 />
             </div>
         </div>
-        <div class="row row-cols-lg-6 row-cols-sm-2 row-cols-md-4 row-cols-xs-1">
+        <div
+            class="row row-cols-lg-6 row-cols-sm-2 row-cols-md-4 row-cols-xs-1"
+        >
             {#each list as emoji}
                 <div class="col mb-3 text-center">
-                    <div class="card h-100" data-clipboard-text=":{emoji.shortcode[0]}:" on:click={() => createToast()}>
-                        <div class="card-header" style="background-color: {colors[Math.floor(Math.random()*colors.length)]};">
+                    <div
+                        class="card h-100"
+                        data-clipboard-text=":{emoji.shortcode[0]}:"
+                        on:click={() => createToast()}
+                    >
+                        <div
+                            class="card-header"
+                            style="background-color: {colors[
+                                Math.floor(Math.random() * colors.length)
+                            ]};"
+                        >
                             <p class="emoji">{emoji.emoji}</p>
                         </div>
                         <div class="card-body">
